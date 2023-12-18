@@ -3,7 +3,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:dogus_app/controller/controller.dart';
 import 'package:dogus_app/pages/quickmenu.dart';
 import 'package:dogus_app/pages/home.dart';
-import 'package:dogus_app/pages/note.dart';
+import 'package:dogus_app/pages/AlinanDersler.dart';
 import 'package:dogus_app/pages/profile.dart';
 import 'package:dogus_app/pages/setting.dart';
 
@@ -44,7 +44,7 @@ class _NavbarState extends State<Navbar> {
             height: 60,
             items: [
               _bottombarItem(Icons.home, 25),
-              _bottombarItem(Icons.note, 25),
+              _bottombarItem(Icons.school_sharp, 25),
               _bottombarItem(Icons.show_chart, 25),
               _bottombarItem(Icons.settings, 25),
               _bottombarItem(Icons.man, 25)
