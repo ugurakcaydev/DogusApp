@@ -58,7 +58,7 @@ class _NavbarState extends State<Navbar> {
                 // QuickMenu'nun index'i
                 showFlexibleBottomSheet(
                     minHeight: 0, // Değiştirin: 0 olarak ayarlandı
-                    initHeight: 1,
+                    initHeight: 0.5,
                     maxHeight: 1,
                     context: context,
                     builder: (BuildContext context,
