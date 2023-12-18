@@ -74,6 +74,10 @@ class _HomePageState extends State<Home> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(100),
                         color: Colors.white,
+                        image: DecorationImage(
+                          image: AssetImage("images/PP.jpg"),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                     Container(
@@ -81,11 +85,11 @@ class _HomePageState extends State<Home> {
                       child: Column(
                         children: [
                           Text(
-                            "UĞUR AKÇAY",
+                            "Muhammed Uğur Emre",
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
                           Text(
-                            "202103011043",
+                            "202103011020",
                             style: TextStyle(fontSize: 12, color: Colors.white),
                           ),
                           Text(
@@ -117,7 +121,7 @@ class _HomePageState extends State<Home> {
                           VerticalLine(),
                           ColumnTextWidget(title: "ANO", describe: "0,00"),
                           VerticalLine(),
-                          ColumnTextWidget(title: "AGNO", describe: "2,77"),
+                          ColumnTextWidget(title: "AGNO", describe: "2,64"),
                         ],
                       ),
                     )
@@ -148,7 +152,7 @@ class _HomePageState extends State<Home> {
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Text("17 °",
+                            Text("4 °",
                                 style: TextStyle(
                                     fontSize: 32, color: Colors.white)),
                             SizedBox(
@@ -162,7 +166,7 @@ class _HomePageState extends State<Home> {
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Cumartesi, 02 Aralık",
+                                Text("Pazar, 17 Aralık",
                                     style: TextStyle(
                                         fontSize: 13, color: Colors.white)),
                                 Row(
