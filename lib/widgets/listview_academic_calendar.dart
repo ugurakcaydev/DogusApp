@@ -1,14 +1,10 @@
-import 'dart:ui';
-import 'package:dogus_app/widgets/items.dart';
+
+import 'package:dogus_app/const/customScroll.dart';
+
+import 'package:dogus_app/server/data/itemAcedemicCalendar.dart';
 import 'package:flutter/material.dart';
 
-class MyCustomScrollBehavior extends MaterialScrollBehavior {
-  @override
-  Set<PointerDeviceKind> get dragDevices => {
-        PointerDeviceKind.touch,
-        PointerDeviceKind.mouse,
-      };
-}
+
 
 class ListviewAcademicCalendar extends StatefulWidget {
   final title;

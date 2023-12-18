@@ -1,10 +1,9 @@
-import 'package:dogus_app/pages/home.dart';
+
 import 'package:dogus_app/widgets/input_box.dart';
 import 'package:dogus_app/widgets/tab_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:http/http.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);

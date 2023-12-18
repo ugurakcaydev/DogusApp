@@ -1,4 +1,6 @@
-import 'package:dogus_app/widgets/items.dart';
+
+import 'package:dogus_app/server/data/itemQuickMenu.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 

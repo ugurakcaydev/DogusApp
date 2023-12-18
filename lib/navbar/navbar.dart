@@ -1,10 +1,14 @@
+import 'package:bottom_sheet/bottom_sheet.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:dogus_app/controller/controller.dart';
-import 'package:dogus_app/pages/chart.dart';
+import 'package:dogus_app/pages/quickmenu.dart';
 import 'package:dogus_app/pages/home.dart';
 import 'package:dogus_app/pages/note.dart';
 import 'package:dogus_app/pages/profile.dart';
 import 'package:dogus_app/pages/setting.dart';
+
+import 'package:dogus_app/server/data/itemQuickMenu.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,16 +21,23 @@ class Navbar extends StatefulWidget {
 
 class _NavbarState extends State<Navbar> {
   final controller = Get.put(NavBarController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GetBuilder<NavBarController>(builder: (context) {
+      body: GetBuilder<NavBarController>(builder: (controller) {
         return Scaffold(
           backgroundColor: Colors.black54,
           body: SafeArea(
             child: IndexedStack(
               index: controller.tabIndex,
-              children: const [Home(), Note(), Chart(), Setting(), Profile()],
+              children: [
+                Home(),
+                Note(),
+                Quickmenu(items: quickMenuItems),
+                Setting(),
+                Profile()
+              ],
             ),
           ),
           bottomNavigationBar: CurvedNavigationBar(
@@ -42,28 +53,56 @@ class _NavbarState extends State<Navbar> {
             animationDuration: Duration(milliseconds: 300),
             color: Colors.black87,
             index: controller.tabIndex,
-            onTap: controller.changeTabIndex,
+            onTap: (index) {
+              if (index == 2) {
+                // QuickMenu'nun index'i
+                showFlexibleBottomSheet(
+                    minHeight: 0, // Değiştirin: 0 olarak ayarlandı
+                    initHeight: 1,
+                    maxHeight: 1,
+                    context: context,
+                    builder: (BuildContext context,
+                        ScrollController scrollController, double offset) {
+                      return Quickmenu(
+                        items: quickMenuItems,
+                        bottomSheetOffset: offset,
+                        scrollController: scrollController,
+                      );
+                    },
+                    anchors: [0, 1],
+                    isSafeArea: true,
+                    isDismissible: false,//windows'ta çalışmıyor ama emülatör de çalışıyor
+                    isModal: true);
+                // showModalBottomSheet(
+                //   context: context,
+                //   builder: (context) {
+                //     return QuickMenu(); // BottomSheet'in içeriği
+                //   },
+                // );
+              } else {
+                controller.changeTabIndex(index);
+              }
+            },
           ),
-          // bottomNavigationBar: BottomNavigationBar(
-          //   iconSize: 20,
-          //   selectedItemColor: Colors.amber,
-          //   unselectedItemColor: Colors.grey.shade300,
-          //   currentIndex: controller.tabIndex,
-          //   onTap: controller.changeTabIndex,
-          //   items: [
-          //     _bottombarItem(IconlyBold.home, "Home"),
-          //     _bottombarItem(IconlyBold.document, "Note"),
-          //     _bottombarItem(IconlyBold.chart, "Chart"),
-          //     _bottombarItem(IconlyBold.setting, "Setting")
-          //   ],
-          // ),
         );
       }),
     );
   }
+
+  // void _showChartBottomSheet(BuildContext context) {
+  //   showModalBottomSheet(
+  //     context: context,
+  //     builder: (BuildContext sheetContext) {
+  //       // BottomSheet içeriği buraya gelecek
+  //       return Container(
+  //         child: Text('Bu bir BottomSheet!'),
+  //       );
+  //     },
+  //   );
+  // }
 }
 
-_bottombarItem(IconData icon, double size) {
+Widget _bottombarItem(IconData icon, double size) {
   return Container(
     padding: EdgeInsets.all(4),
     decoration: BoxDecoration(

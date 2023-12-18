@@ -1,5 +1,5 @@
 import "package:dogus_app/navbar/navbar.dart";
-import "package:dogus_app/pages/chart.dart";
+import 'package:dogus_app/pages/quickmenu.dart';
 import 'package:dogus_app/pages/home.dart';
 import 'package:dogus_app/pages/login.dart';
 import "package:dogus_app/pages/note.dart";
@@ -13,7 +13,7 @@ class AppPage {
     GetPage(name: login, page: () => const LoginPage()),
     GetPage(name: home, page: () => const Home()),
     GetPage(name: note, page: () => const Note()),
-    GetPage(name: chart, page: () => const Chart()),
+    // GetPage(name: chart, page: () => const QuickMenu()),
     GetPage(name: setting, page: () => const Setting()),
     GetPage(name: profile, page: () => const Profile()),
   ];
@@ -22,7 +22,7 @@ class AppPage {
   static getlogin() => login;
   static gethome() => home;
   static getnote() => note;
-  static getchart() => chart;
+  // static getquickmenu() => quickmenu;
   static getsetting() => setting;
   static getprofile() => profile;
 
@@ -31,7 +31,7 @@ class AppPage {
   static String login = "/login";
   static String home = "/home";
   static String note = "/note";
-  static String chart = "/chart";
+  // static String chart = "/quickmenu";
   static String setting = "/setting";
   static String profile = "/profile";
 }

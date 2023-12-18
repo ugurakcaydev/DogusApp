@@ -1,4 +1,4 @@
-import 'package:dogus_app/server/data.dart';
+import 'package:dogus_app/server/data/announcements.dart';
 import 'package:flutter/material.dart';
 
 class Announcements extends StatefulWidget {
