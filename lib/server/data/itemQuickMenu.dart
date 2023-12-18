@@ -9,8 +9,9 @@ class ItemQuickMenu {
 }
 
 List<ItemQuickMenu> quickMenuItems = [
-  ItemQuickMenu(title: "Yoklama", icon: Icons.home, link: "/home"),
-  ItemQuickMenu(title: "Sınav Takvimi", icon: Icons.work, link: "/work"),
+  ItemQuickMenu(title: "Yoklama", icon: Icons.home, link: "/studentcalendar"),
+  ItemQuickMenu(
+      title: "Sınav Takvimi", icon: Icons.work, link: "/studentcalendar"),
   ItemQuickMenu(
       title: "Akademik Takvim", icon: Icons.settings, link: "/settings"),
   ItemQuickMenu(

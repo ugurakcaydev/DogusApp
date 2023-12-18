@@ -33,7 +33,7 @@ class _NavbarState extends State<Navbar> {
               index: controller.tabIndex,
               children: [
                 Home(),
-                Note(),
+                AlinanDersler(),
                 Quickmenu(items: quickMenuItems),
                 Setting(),
                 Profile()
@@ -69,9 +69,10 @@ class _NavbarState extends State<Navbar> {
                         scrollController: scrollController,
                       );
                     },
-                    anchors: [0, 1],
+                    anchors: [0, 0.5, 1],
                     isSafeArea: true,
-                    isDismissible: false,//windows'ta çalışmıyor ama emülatör de çalışıyor
+                    isDismissible:
+                        false, //windows'ta çalışmıyor ama emülatör de çalışıyor
                     isModal: true);
                 // showModalBottomSheet(
                 //   context: context,
