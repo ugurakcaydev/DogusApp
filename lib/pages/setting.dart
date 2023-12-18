@@ -11,9 +11,9 @@ class _SettingState extends State<Setting> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black54,
+      backgroundColor: Colors.yellow,
       body: Center(
-        child: Text("Setting"),
+        child: Text("Göksu"),
       ),
     );
   }
