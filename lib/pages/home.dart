@@ -1,4 +1,4 @@
-
+import 'package:dogus_app/pages/login.dart';
 import 'package:dogus_app/server/data/itemAcedemicCalendar.dart';
 import 'package:dogus_app/server/data/itemQuickMenu.dart';
 import 'package:dogus_app/widgets/announcements.dart';
@@ -32,7 +32,11 @@ class _HomePageState extends State<Home> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, "/login");
+                        // Navigator.pushNamed(context, "/login"); //böyle de kullanılabilir 
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginPage()));
                       },
                       child: Container(
                         padding: EdgeInsets.all(8),
