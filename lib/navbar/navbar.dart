@@ -55,9 +55,13 @@ class _NavbarState extends State<Navbar> {
       hideNavigationBarWhenKeyboardShows:
           true, // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument. Default is true.
       decoration: NavBarDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-        colorBehindNavBar: Colors.white,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(10.0),
+          topRight: Radius.circular(10.0),
+        ),
+        colorBehindNavBar: Colors.green,
       ),
+
       popAllScreensOnTapOfSelectedTab: true,
       popActionScreens: PopActionScreensType.all,
       itemAnimationProperties: ItemAnimationProperties(
@@ -71,93 +75,10 @@ class _NavbarState extends State<Navbar> {
         duration: Duration(milliseconds: 500),
       ),
       navBarStyle:
-          NavBarStyle.style3, // Choose the nav bar style with this property.
+          NavBarStyle.style1, // Choose the nav bar style with this property.
     );
-
-    // return Scaffold(
-    //   body: GetBuilder<NavBarController>(builder: (controller) {
-    //     return Scaffold(
-    //       backgroundColor: Colors.black54,
-    //       body: SafeArea(
-    //         child: IndexedStack(
-    //           index: controller.tabIndex,
-    //           children: [
-    //             Home(),
-    //             AlinanDersler(),
-    //             Quickmenu(items: quickMenuItems),
-    //             Setting(),
-    //             Profile()
-    //           ],
-    //         ),
-    //       ),
-    //       bottomNavigationBar: CurvedNavigationBar(
-    //         height: 60,
-    //         items: [
-    //           _bottombarItem(Icons.home, 25),
-    //           _bottombarItem(Icons.school_sharp, 25),
-    //           _bottombarItem(Icons.show_chart, 25),
-    //           _bottombarItem(Icons.settings, 25),
-    //           _bottombarItem(Icons.man, 25)
-    //         ],
-    //         backgroundColor: Colors.black54,
-    //         animationDuration: Duration(milliseconds: 300),
-    //         color: Colors.black87,
-    //         index: controller.tabIndex,
-    //         onTap: (index) {
-    //           if (index == 2) {
-    //             // QuickMenu'nun index'i
-    //             showFlexibleBottomSheet(
-    //                 minHeight: 0, // Değiştirin: 0 olarak ayarlandı
-    //                 initHeight: 1,
-    //                 maxHeight: 1,
-    //                 context: context,
-    //                 builder: (BuildContext context,
-    //                     ScrollController scrollController, double offset) {
-    //                   return Quickmenu(
-    //                     items: quickMenuItems,
-    //                     bottomSheetOffset: offset,
-    //                     scrollController: scrollController,
-    //                   );
-    //                 },
-    //                 anchors: [0, 1],
-    //                 isSafeArea: true,
-    //                 isDismissible:
-    //                     false, //windows'ta çalışmıyor ama emülatör de çalışıyor
-    //                 isModal: true);
-
-    //           } else {
-    //             controller.changeTabIndex(index);
-    //           }
-    //         },
-    //       ),
-    //     );
-    //   }),
-    // );
   }
-
-  // void _showChartBottomSheet(BuildContext context) {
-  //   showModalBottomSheet(
-  //     context: context,
-  //     builder: (BuildContext sheetContext) {
-  //       // BottomSheet içeriği buraya gelecek
-  //       return Container(
-  //         child: Text('Bu bir BottomSheet!'),
-  //       );
-  //     },
-  //   );
-  // }
 }
-
-// Widget _bottombarItem(IconData icon, double size) {
-//   return Container(
-//     padding: EdgeInsets.all(4),
-//     decoration: BoxDecoration(
-//       shape: BoxShape.circle,
-//       // Set the desired color for the icon
-//     ),
-//     child: Icon(icon, size: size, color: Colors.white), // Set the icon color
-//   );
-// }
 
 PersistentBottomNavBarItem _navBarsItems(
   IconData icon,
@@ -171,5 +92,6 @@ PersistentBottomNavBarItem _navBarsItems(
       color: Colors.white,
     ),
     title: title,
+    activeColorPrimary: Colors.white,
   );
 }
