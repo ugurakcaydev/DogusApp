@@ -71,7 +71,7 @@ class _NavbarState extends State<Navbar> {
         duration: Duration(milliseconds: 500),
       ),
       navBarStyle:
-          NavBarStyle.style3, // Choose the nav bar style with this property.
+          NavBarStyle.style1, // Choose the nav bar style with this property.
     );
 
     // return Scaffold(
@@ -171,5 +171,6 @@ PersistentBottomNavBarItem _navBarsItems(
       color: Colors.white,
     ),
     title: title,
+    activeColorPrimary: Colors.white,
   );
 }
