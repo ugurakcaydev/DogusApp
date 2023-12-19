@@ -72,67 +72,61 @@ class _ListViewQuickMenuState extends State<ListViewQuickMenu> {
               ),
             ),
             SizedBox(height: 10),
-            GestureDetector(
-              onTap: () {
-                // Navigator.push(context,
-                //     MaterialPageRoute(builder: (context) => StudentCalendar()));
-              },
-              child: SizedBox(
-                height: 100,
-                child: ListView.builder(
-                  itemCount: widget.items.length,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) {
-                    final item = widget.items[index];
-                    return GestureDetector(
-                      onTap: () {
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //         builder: (context) => item.link));
-                        Navigator.pushNamed(context, item.link);
-                      },
-                      child: Container(
-                        width: 100,
-                        padding: EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                          color: Colors.black45,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        margin: EdgeInsets.only(
-                          right: index == widget.items.length - 1 ? 30 : 5,
-                          left: index == 0 ? 30 : 5,
-                        ),
-                        child: Align(
-                          alignment: Alignment.center,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Icon(
-                                item.icon,
-                                size: 25,
-                                color: Colors.white,
-                              ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                item.title,
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                                textAlign: TextAlign.center,
-                                softWrap: true,
-                                overflow: TextOverflow.ellipsis,
-                                maxLines: 2,
-                              )
-                            ],
-                          ),
+            SizedBox(
+              height: 100,
+              child: ListView.builder(
+                itemCount: widget.items.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  final item = widget.items[index];
+                  return GestureDetector(
+                    onTap: () {
+                      // Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //         builder: (context) => item.link));
+                      Navigator.pushNamed(context, item.link);
+                    },
+                    child: Container(
+                      width: 100,
+                      padding: EdgeInsets.only(top: 23),
+                      decoration: BoxDecoration(
+                        color: Colors.black45,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      margin: EdgeInsets.only(
+                        right: index == widget.items.length - 1 ? 30 : 5,
+                        left: index == 0 ? 30 : 5,
+                      ),
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Icon(
+                              item.icon,
+                              size: 25,
+                              color: Colors.white,
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              item.title,
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 14),
+                              textAlign: TextAlign.center,
+                              softWrap: true,
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
+                            )
+                          ],
                         ),
                       ),
-                    );
-                  },
-                ),
+                    ),
+                  );
+                },
               ),
             )
           ],

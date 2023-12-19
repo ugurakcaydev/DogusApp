@@ -1,11 +1,11 @@
-import 'dart:math';
+// import 'dart:math';
 
-import 'package:get/get.dart';
+// import 'package:get/get.dart';
 
-class NavBarController extends GetxController {
-  var tabIndex = 0;
-  void changeTabIndex(int index) {
-    tabIndex = index;
-    update();
-  }
-}
+// class NavBarController extends GetxController {
+//   var tabIndex = 0;
+//   void changeTabIndex(int index) {
+//     tabIndex = index;
+//     update();
+//   }
+// }

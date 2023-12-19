@@ -9,17 +9,21 @@ class ItemQuickMenu {
 }
 
 List<ItemQuickMenu> quickMenuItems = [
-  ItemQuickMenu(title: "Yoklama", icon: Icons.home, link: "/studentcalendar"),
+  ItemQuickMenu(title: "Yoklama", icon: Icons.home, link: "/classattendance"),
   ItemQuickMenu(
       title: "Sınav Takvimi", icon: Icons.work, link: "/studentcalendar"),
   ItemQuickMenu(
-      title: "Akademik Takvim", icon: Icons.settings, link: "/settings"),
+      title: "Akademik Takvim",
+      icon: Icons.settings,
+      link: "/academiccalendar"),
   ItemQuickMenu(
-      title: "Alınan Dersleri", icon: Icons.settings, link: "/settings"),
+      title: "Alınan Dersler", icon: Icons.settings, link: "/lessonslearned"),
   ItemQuickMenu(
-      title: "Sınav Sonuçları", icon: Icons.settings, link: "/settings"),
+      title: "Sınav Sonuçları", icon: Icons.settings, link: "/resultofexam"),
   ItemQuickMenu(
-      title: "Dönem Ortalamaları", icon: Icons.settings, link: "/settings"),
+      title: "Dönem Ortalamaları",
+      icon: Icons.settings,
+      link: "/semesteravarages"),
   ItemQuickMenu(title: "Transkript", icon: Icons.settings, link: "/settings"),
   ItemQuickMenu(
       title: "Ders Programı", icon: Icons.settings, link: "/settings"),

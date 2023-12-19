@@ -45,6 +45,7 @@ dependencies:
   flutter_iconly: ^1.0.2
   curved_navigation_bar: ^1.0.3
   bottom_sheet: ^4.0.0
+  persistent_bottom_nav_bar: ^5.0.2
   
 
 dev_dependencies:
