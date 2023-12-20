@@ -16,9 +16,9 @@ void showCustomBottomSheet(int index, BuildContext context,
   switch (index) {
     case 2: //QuickMenu
       minHeight = 0;
-      initHeight = 0.5;
+      initHeight = 1;
       maxHeight = 1;
-      anchors = [0, 0.5, 1];
+      anchors = [0, 1];
       screen = Quickmenu(
         items: quickMenuItems,
       );

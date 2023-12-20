@@ -85,7 +85,7 @@ class _ListViewQuickMenuState extends State<ListViewQuickMenu> {
                       //     context,
                       //     MaterialPageRoute(
                       //         builder: (context) => item.link));
-                      Navigator.pushNamed(context, item.link);
+                     Navigator.of(context, rootNavigator: true).pushNamed(item.link);
                     },
                     child: Container(
                       width: 100,
