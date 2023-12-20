@@ -1,6 +1,5 @@
 import 'package:dogus_app/pages/home.dart';
-import 'package:dogus_app/pages/AlinanDersler.dart';
-
+import 'package:dogus_app/pages/mylessons.dart';
 import 'package:dogus_app/pages/setting.dart';
 import 'package:dogus_app/widgets/customBottomSheet.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
@@ -34,7 +33,7 @@ class _NavbarState extends State<Navbar> {
       controller: _controller,
       screens: [
         Home(),
-        AlinanDersler(),
+        MyLessons(),
         Container(), //QuickMenu
         Setting(),
         Container() //Notifications

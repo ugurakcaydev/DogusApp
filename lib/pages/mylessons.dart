@@ -1,69 +1,48 @@
 import 'package:flutter/material.dart';
 
-class AlinanDersler extends StatefulWidget {
-  const AlinanDersler({Key? key}) : super(key: key);
+class MyLessons extends StatefulWidget {
+  const MyLessons({Key? key}) : super(key: key);
 
   @override
-  _AlinanDerslerState createState() => _AlinanDerslerState();
+  _MyLessonsState createState() => _MyLessonsState();
 }
 
-class _AlinanDerslerState extends State<AlinanDersler> {
+class _MyLessonsState extends State<MyLessons> {
   List<Map<String, dynamic>> dummyData = [
     {
-      "lessonName": "Matematik",
-      "instructor": "Ahmet Hoca",
-      "grade": "AA",
-      "akts": 5,
-      "credit": 3,
-      "icon": Icons.school_sharp,
-      "details": "Matematik dersi ile ilgili ek bilgiler burada yer alacak.",
+      'lessonCode': 'CS101',
+      'lessonName': 'Introduction to Computer Science',
+      'instructor': 'Prof. John Doe',
+      'branch': 'A',
+      'grade': 'A+',
+      'akts': 3,
+      'credit': 5,
+      'details': 'This is an introductory course to computer science.',
     },
     {
-      "lessonName": "Fizik",
-      "instructor": "Ayşe Hoca",
-      "grade": "BB",
-      "akts": 4,
-      "credit": 4,
-      "icon": Icons.science_sharp,
-      "details": "Fizik dersi ile ilgili ek bilgiler burada yer alacak.",
+      'lessonCode': 'MATH202',
+      'lessonName': 'Advanced Mathematics',
+      'instructor': 'Dr. Jane Smith',
+      'branch': 'B',
+      'grade': 'B',
+      'akts': 4,
+      'credit': 6,
+      'details': 'This course covers advanced mathematical topics.',
     },
-    {
-      "lessonName": "Biyoloji",
-      "instructor": "Mehmet Hoca",
-      "grade": "CC",
-      "akts": 3,
-      "credit": 4,
-      "icon": Icons.local_florist_sharp,
-      "details": "Biyoloji dersi ile ilgili ek bilgiler burada yer alacak.",
-    },
-    {
-      "lessonName": "Kimya",
-      "instructor": "Fatma Hoca",
-      "grade": "BA",
-      "akts": 4,
-      "credit": 3,
-      "icon": Icons.science_sharp,
-      "details": "Kimya dersi ile ilgili ek bilgiler burada yer alacak.",
-    },
-    // Diğer dersler...
-  ];
+  ]; // Diğer dersler ]
 
   int? selectedLessonIndex;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Alınan Dersler'),
+        backgroundColor: Color(0xffc1121f),
+        centerTitle: true,
+      ),
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("images/Dogus_universitesi_logo.png"),
-            fit: BoxFit.cover,
-            colorFilter: ColorFilter.mode(
-              Colors.black.withOpacity(0.2),
-              BlendMode.dstATop,
-            ),
-          ),
-        ),
+        color: Colors.red[300],
         child: ListView.builder(
           itemCount: dummyData.length,
           itemBuilder: (context, index) {
@@ -71,11 +50,9 @@ class _AlinanDerslerState extends State<AlinanDersler> {
             return GestureDetector(
               onTap: () {
                 setState(() {
-                  if (selectedLessonIndex == index) {
-                    selectedLessonIndex = null;
-                  } else {
-                    selectedLessonIndex = index;
-                  }
+                  selectedLessonIndex =
+                      selectedLessonIndex == index ? null : index;
+                  Navigator.of(context, rootNavigator: true);
                 });
               },
               child: AnimatedContainer(
@@ -86,8 +63,7 @@ class _AlinanDerslerState extends State<AlinanDersler> {
                 decoration: BoxDecoration(
                   color: Colors.white.withOpacity(0.8),
                   borderRadius: BorderRadius.circular(
-                    selectedLessonIndex == index ? 0 : 16,
-                  ),
+                      selectedLessonIndex == index ? 0 : 16),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black.withOpacity(0.3),
@@ -99,26 +75,39 @@ class _AlinanDerslerState extends State<AlinanDersler> {
                 child: Column(
                   children: [
                     ListTile(
-                      leading: Icon(
-                        lesson['icon'],
-                        size: 40,
-                        color: Colors.blue,
+                      leading: CircleAvatar(
+                        backgroundImage: AssetImage('images/mitatuysal.jpg'),
                       ),
-                      title: Text(
-                        lesson['lessonName']!,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
+                      title: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '${lesson['lessonCode']} - ${lesson['lessonName']}',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                            ),
+                          ),
+                          Divider(
+                            color: Colors.black87,
+                            height: 15,
+                          ), // Yatay çizgi ekleniyor
+                        ],
                       ),
                       subtitle: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(height: 16),
                           Text('Hoca: ${lesson['instructor']}'),
+                          Divider(color: Colors.black54, height: 5),
+                          Text('Şube: ${lesson['branch']}'),
+                          Divider(color: Colors.black54, height: 5),
                           Text('Not: ${lesson['grade']}'),
+                          Divider(color: Colors.black54, height: 5),
                           Text('AKTS: ${lesson['akts']}'),
+                          Divider(color: Colors.black54, height: 5),
                           Text('Kredi: ${lesson['credit']}'),
+                          Divider(color: Colors.black54, height: 5),
                         ],
                       ),
                       tileColor: Colors.transparent,
@@ -134,15 +123,18 @@ class _AlinanDerslerState extends State<AlinanDersler> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Ek Bilgiler:',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 16)),
+                            Text(
+                              'Ek Bilgiler:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
+                            ),
                             SizedBox(height: 8),
                             Text(lesson['details'] ?? ''),
                           ],
                         ),
                       ),
-                    Divider(color: Colors.black),
                   ],
                 ),
               ),
