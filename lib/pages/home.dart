@@ -19,7 +19,7 @@ class _HomePageState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black54,
+      backgroundColor: Colors.red[300],
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -32,11 +32,13 @@ class _HomePageState extends State<Home> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        // Navigator.pushNamed(context, "/login"); //böyle de kullanılabilir 
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => LoginPage()));
+                        // Navigator.pushNamed(context, "/login"); //böyle de kullanılabilir
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (context) => LoginPage()));
+                        Navigator.of(context, rootNavigator: true)
+                            .pushNamed("/login");
                       },
                       child: Container(
                         padding: EdgeInsets.all(8),
@@ -49,7 +51,8 @@ class _HomePageState extends State<Home> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, "/setting");
+                        Navigator.of(context, rootNavigator: true)
+                            .pushNamed("/setting");
                       },
                       child: Container(
                         padding: EdgeInsets.all(8),
@@ -69,7 +72,7 @@ class _HomePageState extends State<Home> {
                 padding: EdgeInsets.symmetric(vertical: 12),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.black54,
+                  color: Color(0xffC1121F),
                 ),
                 child: Column(
                   children: [
@@ -92,19 +95,19 @@ class _HomePageState extends State<Home> {
                         children: [
                           Text(
                             "Muhammed Uğur Emre",
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            style: TextStyle(fontSize: 20, color: Colors.black),
                           ),
                           Text(
                             "202103011020",
-                            style: TextStyle(fontSize: 12, color: Colors.white),
+                            style: TextStyle(fontSize: 12, color: Colors.black),
                           ),
                           Text(
                             "MÜHENDİSLİK FAKÜLTESİ",
-                            style: TextStyle(fontSize: 13, color: Colors.white),
+                            style: TextStyle(fontSize: 13, color: Colors.black),
                           ),
                           Text(
                             "YAZILIM MÜHENDİSLİĞİ",
-                            style: TextStyle(fontSize: 13, color: Colors.white),
+                            style: TextStyle(fontSize: 13, color: Colors.black),
                           ),
                         ],
                       ),
@@ -114,7 +117,7 @@ class _HomePageState extends State<Home> {
                       width: 300,
                       decoration: BoxDecoration(
                         border: Border(
-                          top: BorderSide(color: Colors.white, width: 1),
+                          top: BorderSide(color: Colors.black, width: 1),
                         ),
                       ),
                       child: Row(
@@ -140,7 +143,7 @@ class _HomePageState extends State<Home> {
                 padding: EdgeInsets.symmetric(vertical: 15, horizontal: 23),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.black54,
+                  color: Color(0xffC1121F),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -151,7 +154,7 @@ class _HomePageState extends State<Home> {
                       children: [
                         Text("açık",
                             style:
-                                TextStyle(fontSize: 14, color: Colors.white)),
+                                TextStyle(fontSize: 14, color: Colors.black)),
                         SizedBox(
                           height: 5,
                         ),
@@ -160,7 +163,7 @@ class _HomePageState extends State<Home> {
                           children: [
                             Text("4 °",
                                 style: TextStyle(
-                                    fontSize: 32, color: Colors.white)),
+                                    fontSize: 32, color: Colors.black)),
                             SizedBox(
                               width: 8,
                             ),
@@ -174,18 +177,18 @@ class _HomePageState extends State<Home> {
                               children: [
                                 Text("Pazar, 17 Aralık",
                                     style: TextStyle(
-                                        fontSize: 13, color: Colors.white)),
+                                        fontSize: 13, color: Colors.black)),
                                 Row(
                                   children: [
                                     Icon(
                                       Icons.key,
-                                      color: Colors.white,
+                                      color: Colors.black,
                                     ),
                                     SizedBox(width: 5),
                                     Text(
                                       "Ümraniye",
                                       style: TextStyle(
-                                          fontSize: 14, color: Colors.white),
+                                          fontSize: 14, color: Colors.black),
                                     ),
                                   ],
                                 )
@@ -200,7 +203,7 @@ class _HomePageState extends State<Home> {
                       height: 50,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(100),
-                        color: Colors.deepOrange[400],
+                        color: Colors.yellow[400],
                       ),
                     )
                   ],

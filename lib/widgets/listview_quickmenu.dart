@@ -47,7 +47,7 @@ class _ListViewQuickMenuState extends State<ListViewQuickMenu> {
                     padding: EdgeInsets.symmetric(vertical: 6, horizontal: 12),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.black26),
+                        color: Color(0xffC1121F)),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -83,13 +83,14 @@ class _ListViewQuickMenuState extends State<ListViewQuickMenu> {
                       //     context,
                       //     MaterialPageRoute(
                       //         builder: (context) => item.link));
-                     Navigator.of(context, rootNavigator: true).pushNamed(item.link);
+                      Navigator.of(context, rootNavigator: true)
+                          .pushNamed(item.link);
                     },
                     child: Container(
                       width: 100,
                       padding: EdgeInsets.only(top: 23),
                       decoration: BoxDecoration(
-                        color: Colors.black45,
+                        color: Color(0xffC1121F),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       margin: EdgeInsets.only(

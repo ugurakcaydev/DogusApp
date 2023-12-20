@@ -66,7 +66,7 @@ class Quickmenu extends StatelessWidget {
                           height: 100,
                           padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: const Color.fromARGB(185, 0, 0, 0),
+                            color: const Color(0xffc1121f),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Align(

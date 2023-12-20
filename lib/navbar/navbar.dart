@@ -40,7 +40,7 @@ class _NavbarState extends State<Navbar> {
         Container() //Notifications
       ],
       items: [
-        _navBarsItems(Icons.home, 22, "Ana Sayfa"),
+        _navBarsItems(Icons.deblur_outlined, 22, "Ana Sayfa"),
         _navBarsItems(Icons.class_outlined, 22, "Alınan Dersler"),
         _navBarsItems(
             Icons.grid_view_sharp, 22, "Hızlı Menü"), //Icons.apps_outlined

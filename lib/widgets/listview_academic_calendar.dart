@@ -78,7 +78,7 @@ class _ListviewAcademicCalendarState extends State<ListviewAcademicCalendar> {
                     ),
                     width: 250,
                     decoration: BoxDecoration(
-                      color: Colors.black45,
+                      color: Color(0xffC1121F),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Row(

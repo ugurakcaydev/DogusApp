@@ -52,7 +52,7 @@ class _AnnouncementsState extends State<Announcements> {
               width: 350,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Colors.black45,
+                color: Color(0xffc1121f),
               ),
               child: announcements.isEmpty
                   ? Container(
