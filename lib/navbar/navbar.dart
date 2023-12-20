@@ -41,10 +41,12 @@ class _NavbarState extends State<Navbar> {
       ],
       items: [
         _navBarsItems(Icons.home, 22, "Ana Sayfa"),
-        _navBarsItems(Icons.school_sharp, 22, "Alınan Dersler"),
-        _navBarsItems(Icons.show_chart, 22, "Hızlı Menü"),
-        _navBarsItems(Icons.settings, 22, "Sınav Sonuçları"),
-        _navBarsItems(Icons.man, 22, "Bildirimler")
+        _navBarsItems(Icons.class_outlined, 22, "Alınan Dersler"),
+        _navBarsItems(
+            Icons.grid_view_sharp, 22, "Hızlı Menü"), //Icons.apps_outlined
+        _navBarsItems(Icons.list_alt_outlined, 22,
+            "Sınav Sonuçları"), //Icons.deblur_sharp, Icons.insert_chart_outlined_rounded
+        _navBarsItems(Icons.notifications_on_outlined, 22, "Bildirimler")
       ],
       confineInSafeArea: true,
       backgroundColor: Color(0xffc1121f), // Default is Colors.white.

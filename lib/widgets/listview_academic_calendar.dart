@@ -1,13 +1,10 @@
-
 import 'package:dogus_app/const/customScroll.dart';
 
 import 'package:dogus_app/server/data/itemAcedemicCalendar.dart';
 import 'package:flutter/material.dart';
 
-
-
 class ListviewAcademicCalendar extends StatefulWidget {
-  final title;
+  final String title;
   final List<ItemAcademicCalendar> items;
 
   const ListviewAcademicCalendar({
@@ -95,8 +92,9 @@ class _ListviewAcademicCalendarState extends State<ListviewAcademicCalendar> {
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Column(
-                            mainAxisAlignment:
-                                MainAxisAlignment.center, // Bu satırı ekleyin
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment:
+                                CrossAxisAlignment.center, // Bu satırı ekleyin
                             children: [
                               Text(
                                 "27",

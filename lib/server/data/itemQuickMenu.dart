@@ -17,7 +17,7 @@ List<ItemQuickMenu> quickMenuItems = [
       title: "Sınav Takvimi", icon: Icons.work, link: "/studentcalendar"),
   ItemQuickMenu(
       title: "Akademik Takvim",
-      icon: Icons.settings,
+      icon: Icons.calendar_month_outlined,
       link: "/academiccalendar"),
   ItemQuickMenu(
       title: "Alınan Dersler", icon: Icons.settings, link: "/lessonslearned"),
