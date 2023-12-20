@@ -112,22 +112,6 @@ packages:
       sha256: b0bdd73bb495c31c5711cefa363511b10bb3ebcfc007b603a2599401ebe6b2d9
       url: "https://pub.dev"
     source: hosted
-    version: "1.18.0"
-  contained_tab_bar_view:
-    dependency: "direct main"
-    description:
-      name: contained_tab_bar_view
-      sha256: "87e35f47992764e45ab6205493f2f90c1e3fac4ad84f2b2285b73414727b756e"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.8.0"
-  container_tab_indicator:
-    dependency: transitive
-    description:
-      name: container_tab_indicator
-      sha256: b0bdd73bb495c31c5711cefa363511b10bb3ebcfc007b603a2599401ebe6b2d9
-      url: "https://pub.dev"
-    source: hosted
     version: "0.3.0"
   cupertino_icons:
     dependency: "direct main"
@@ -304,6 +288,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
+  nested:
+    dependency: transitive
+    description:
+      name: nested
+      sha256: "03bac4c528c64c95c722ec99280375a6f2fc708eec17c7b3f07253b626cd2a20"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   path:
     dependency: transitive
     description:
@@ -328,6 +320,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.7"
+  provider:
+    dependency: "direct main"
+    description:
+      name: provider
+      sha256: "9a96a0a19b594dbc5bf0f1f27d2bc67d5f95957359b461cd9feb44ed6ae75096"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.1.1"
   sky_engine:
     dependency: transitive
     description: flutter

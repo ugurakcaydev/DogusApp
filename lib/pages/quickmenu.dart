@@ -21,7 +21,8 @@ class Quickmenu extends StatelessWidget {
       child: ScrollConfiguration(
         behavior: MyCustomScrollBehavior(),
         child: Container(
-          decoration: BoxDecoration(color: Colors.black26),
+          decoration:
+              BoxDecoration(color: Theme.of(context).colorScheme.background),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 35),
             child: ListView(
