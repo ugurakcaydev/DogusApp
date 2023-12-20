@@ -9,7 +9,10 @@ class ItemQuickMenu {
 }
 
 List<ItemQuickMenu> quickMenuItems = [
-  ItemQuickMenu(title: "Yoklama", icon: Icons.home, link: "/classattendance"),
+  ItemQuickMenu(
+      title: "Devamsızlık Durumu",
+      icon: Icons.person_search_rounded,
+      link: "/classattendance"),
   ItemQuickMenu(
       title: "Sınav Takvimi", icon: Icons.work, link: "/studentcalendar"),
   ItemQuickMenu(
