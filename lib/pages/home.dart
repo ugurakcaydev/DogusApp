@@ -1,12 +1,14 @@
 import 'package:dogus_app/pages/login.dart';
 import 'package:dogus_app/server/data/itemAcedemicCalendar.dart';
 import 'package:dogus_app/server/data/itemQuickMenu.dart';
+import 'package:dogus_app/theme/theme_provider.dart';
 import 'package:dogus_app/widgets/announcements.dart';
 import 'package:dogus_app/widgets/listview_academic_calendar.dart';
 import 'package:dogus_app/widgets/listview_quickmenu.dart';
 import 'package:dogus_app/widgets/text.dart';
 import 'package:dogus_app/widgets/vertical_line.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -19,7 +21,7 @@ class _HomePageState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black54,
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -32,7 +34,7 @@ class _HomePageState extends State<Home> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        // Navigator.pushNamed(context, "/login"); //böyle de kullanılabilir 
+                        // Navigator.pushNamed(context, "/login"); //böyle de kullanılabilir
                         Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -47,19 +49,37 @@ class _HomePageState extends State<Home> {
                         ),
                       ),
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, "/setting");
-                      },
-                      child: Container(
-                        padding: EdgeInsets.all(8),
-                        child: Icon(
-                          Icons.settings,
-                          size: 30,
-                          color: Colors.white,
+                    Row(
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, "/setting");
+                          },
+                          child: Container(
+                            padding: EdgeInsets.all(8),
+                            child: Icon(
+                              Icons.settings,
+                              size: 30,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
+                        GestureDetector(
+                          onTap: () {
+                            Provider.of<ThemeProvider>(context, listen: false)
+                                .toggleTheme();
+                          },
+                          child: Container(
+                            padding: EdgeInsets.all(8),
+                            child: Icon(
+                              Icons.sunny,
+                              size: 30,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ],
+                    )
                   ],
                 ),
               ),
