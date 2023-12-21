@@ -21,7 +21,8 @@ class _HomePageState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red[300],
+      backgroundColor:
+          Theme.of(context).colorScheme.background, //Colors.red[300],
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -51,20 +52,37 @@ class _HomePageState extends State<Home> {
                         ),
                       ),
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context, rootNavigator: true)
-                            .pushNamed("/setting");
-                      },
-                      child: Container(
-                        padding: EdgeInsets.all(8),
-                        child: Icon(
-                          Icons.settings,
-                          size: 30,
-                          color: Colors.white,
+                    Row(
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, "/setting");
+                          },
+                          child: Container(
+                            padding: EdgeInsets.all(8),
+                            child: Icon(
+                              Icons.settings,
+                              size: 30,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
+                        GestureDetector(
+                          onTap: () {
+                            Provider.of<ThemeProvider>(context, listen: false)
+                                .toggleTheme();
+                          },
+                          child: Container(
+                            padding: EdgeInsets.all(8),
+                            child: Icon(
+                              Icons.sunny,
+                              size: 30,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ],
+                    )
                   ],
                 ),
               ),
