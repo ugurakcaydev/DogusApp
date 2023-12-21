@@ -22,7 +22,7 @@ class _ProfileState extends State<Profile> {
     return Container(
       height: MediaQuery.of(context).size.height * 0.6,
       decoration: BoxDecoration(
-        color: Colors.red[400],
+        color: Color(0xffc1121f),
       ),
       child: Padding(
         padding: const EdgeInsets.all(20.0),
