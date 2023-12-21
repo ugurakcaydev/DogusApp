@@ -15,12 +15,6 @@ class _StudentProgramState extends State<StudentProgram> {
       {
         "lesson": "Mühendisler İçin KatıHal Fiziği",
         "code": "FİZ 371(1)",
-        "time": "15:00-15.50",
-        "location": "D.B2-01"
-      },
-      {
-        "lesson": "Mühendisler İçin KatıHal Fiziği",
-        "code": "FİZ 371(1)",
         "time": "16:00-16.50",
         "location": "D.B2-01"
       },
@@ -183,91 +177,100 @@ class _StudentProgramState extends State<StudentProgram> {
           ),
         ),
         body: SafeArea(
-          child: Center(
+          child: SingleChildScrollView(
             child: Container(
               width: double.infinity,
-              height: 700,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
-                    height: 5,
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 5),
+                    child: Center(
+                      child: Text(
+                        'Bildirilen ders saatleri değişiklik gösterebilir.',
+                      ),
+                    ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10.0),
-                    child: Text(
-                        'Bildirilen ders saatleri değişiklik gösterebilir.'),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  CustomButton(onButtonPressed: showLessons),
+                  Center(child: CustomButton(onButtonPressed: showLessons)),
                   if (selectedDayIndex != -1)
                     Column(
                       children: [
-                        SizedBox(height: 10),
-                        Text(
-                          ' ${getDayName(selectedDayIndex)}',
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.bold),
+                        Container(
+                          margin: EdgeInsets.symmetric(vertical: 10),
+                          child: Center(
+                            child: Text(
+                              ' ${getDayName(selectedDayIndex)}',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
                         ),
                         Container(
-                          height: 400,
-                          child: ListView(
-                            children:
-                                lessonData[selectedDayIndex].map((lessonInfo) {
-                              return Container(
-                                margin: EdgeInsets.symmetric(
-                                    horizontal: 10, vertical: 5),
-                                padding: EdgeInsets.all(15),
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.grey),
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Text(
-                                                lessonInfo["lesson"] ?? "",
-                                                style: TextStyle(
+                          padding: EdgeInsets.only(top: 5, bottom: 15),
+                          child: SingleChildScrollView(
+                            child: Column(
+                              children: lessonData[selectedDayIndex]
+                                  .map((lessonInfo) {
+                                return Container(
+                                  margin: EdgeInsets.symmetric(
+                                      horizontal: 10, vertical: 5),
+                                  padding: EdgeInsets.all(15),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.grey),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Expanded(
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Text(
+                                                  lessonInfo["lesson"] ?? "",
+                                                  style: TextStyle(
                                                     fontSize: 16,
-                                                    fontWeight:
-                                                        FontWeight.bold),
-                                              ),
-                                              Text(
-                                                "${lessonInfo["code"] ?? ""}",
-                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                                Text(
+                                                  "${lessonInfo["code"] ?? ""}",
+                                                  style: TextStyle(
                                                     fontSize: 14,
-                                                    color: Colors.grey),
-                                              ),
-                                              Text(
-                                                "${lessonInfo["location"] ?? ""}",
-                                                style: TextStyle(
+                                                    color: Colors.grey,
+                                                  ),
+                                                ),
+                                                Text(
+                                                  "${lessonInfo["location"] ?? ""}",
+                                                  style: TextStyle(
                                                     fontSize: 14,
-                                                    color: Colors.grey),
-                                              ),
-                                            ],
+                                                    color: Colors.grey,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                        Text(
-                                          lessonInfo["time"] ?? "",
-                                          style: TextStyle(
-                                              fontSize: 14, color: Colors.grey),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              );
-                            }).toList(),
+                                          Text(
+                                            lessonInfo["time"] ?? "",
+                                            style: TextStyle(
+                                              fontSize: 14,
+                                              color: Colors.grey,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              }).toList(),
+                            ),
                           ),
                         ),
                       ],
