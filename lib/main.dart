@@ -1,5 +1,4 @@
 import 'package:dogus_app/routes/routes.dart';
-import 'package:dogus_app/theme/theme.dart';
 import 'package:dogus_app/theme/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
