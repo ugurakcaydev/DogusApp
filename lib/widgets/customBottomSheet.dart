@@ -1,5 +1,5 @@
 import 'package:bottom_sheet/bottom_sheet.dart';
-import 'package:dogus_app/pages/profile.dart';
+import 'package:dogus_app/pages/notification.dart';
 import 'package:dogus_app/pages/quickmenu.dart';
 import 'package:dogus_app/server/data/itemQuickMenu.dart';
 import 'package:flutter/material.dart';
@@ -23,12 +23,12 @@ void showCustomBottomSheet(int index, BuildContext context,
         items: quickMenuItems,
       );
       break;
-    case 4: //Profile
+    case 4: //Notification
       minHeight = 0;
       initHeight = 0.5;
       maxHeight = 1;
       anchors = [0, 0.5, 1];
-      screen = Profile();
+      screen = NotificationsPage();
       break;
   }
   showFlexibleBottomSheet(

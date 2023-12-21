@@ -2,21 +2,21 @@ import 'package:dogus_app/const/customScroll.dart';
 import 'package:flutter/material.dart';
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 
-class Profile extends StatefulWidget {
+class NotificationsPage extends StatefulWidget {
   final ScrollController? scrollController;
   final double? bottomSheetOffset;
 
-  const Profile({
+  const NotificationsPage({
     Key? key,
     this.scrollController,
     this.bottomSheetOffset,
   }) : super(key: key);
 
   @override
-  _ProfileState createState() => _ProfileState();
+  _NotificationsPageState createState() => _NotificationsPageState();
 }
 
-class _ProfileState extends State<Profile> {
+class _NotificationsPageState extends State<NotificationsPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
