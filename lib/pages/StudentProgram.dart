@@ -209,6 +209,7 @@ class _StudentProgramState extends State<StudentProgram> {
                           ),
                         ),
                         Container(
+                          color: Colors.red,
                           padding: EdgeInsets.only(top: 5, bottom: 15),
                           child: SingleChildScrollView(
                             child: Column(
@@ -296,3 +297,6 @@ class _StudentProgramState extends State<StudentProgram> {
     return dayNames[dayIndex];
   }
 }
+
+
+//selensari

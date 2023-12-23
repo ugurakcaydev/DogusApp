@@ -17,14 +17,13 @@ class _CustomButtonState extends State<CustomButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
             for (int i = 0; i < 6; i++)
               Padding(
-                padding: const EdgeInsets.only(right: 2.0),
+                padding: const EdgeInsets.only(right: 0),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     shape: CircleBorder(),
