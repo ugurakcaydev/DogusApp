@@ -297,6 +297,3 @@ class _StudentProgramState extends State<StudentProgram> {
     return dayNames[dayIndex];
   }
 }
-
-
-//selensari

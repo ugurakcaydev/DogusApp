@@ -1,4 +1,4 @@
-import 'package:dogus_app/const/customScroll.dart';
+// import 'package:dogus_app/const/customScroll.dart';
 import 'package:flutter/material.dart';
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 
