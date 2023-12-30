@@ -37,27 +37,33 @@ class _ListviewAcademicCalendarState extends State<ListviewAcademicCalendar> {
                     widget.title,
                     style: TextStyle(color: Colors.white70, fontSize: 20),
                   ),
-                  Container(
-                    padding: EdgeInsets.symmetric(vertical: 6, horizontal: 12),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.black26),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Tümü",
-                          style: TextStyle(color: Colors.white, fontSize: 12),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Icon(
-                          Icons.edit_calendar,
-                          color: Colors.white,
-                          size: 20,
-                        )
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context, rootNavigator: true)
+                          .pushNamed("/academiccalendar");
+                    },
+                    child: Container(
+                      padding:
+                          EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.black26),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Tümü",
+                            style: TextStyle(color: Colors.white, fontSize: 12),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Icon(
+                            Icons.edit_calendar,
+                            color: Colors.white,
+                            size: 20,
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -67,7 +73,7 @@ class _ListviewAcademicCalendarState extends State<ListviewAcademicCalendar> {
             SizedBox(
               height: 80,
               child: ListView.builder(
-                itemCount: widget.items.length,
+                itemCount: widget.items.length > 3 ? 3 : widget.items.length,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   final item = widget.items[index];
@@ -78,7 +84,7 @@ class _ListviewAcademicCalendarState extends State<ListviewAcademicCalendar> {
                     ),
                     width: 250,
                     decoration: BoxDecoration(
-                      color: Color(0xffC1121F),
+                      color: Colors.grey[700],
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Row(
@@ -128,8 +134,22 @@ class _ListviewAcademicCalendarState extends State<ListviewAcademicCalendar> {
                                   maxLines: 2,
                                 ),
                                 SizedBox(height: 5),
-                                Text(item.date,
-                                    style: TextStyle(color: Colors.white))
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(item.startingdate,
+                                        style: TextStyle(color: Colors.white)),
+                                    SizedBox(width: 5),
+                                    Text(
+                                      "-",
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                    SizedBox(width: 5),
+                                    Text(item.endingdate,
+                                        style: TextStyle(color: Colors.white))
+                                  ],
+                                )
                               ],
                             ),
                           ),

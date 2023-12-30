@@ -44,7 +44,7 @@ class _NavbarState extends State<Navbar> {
         _navBarsItems(
             Icons.grid_view_sharp, 22, "Hızlı Menü"), //Icons.apps_outlined
         _navBarsItems(Icons.list_alt_outlined, 22,
-            "Sınav Sonuçları"), //Icons.deblur_sharp, Icons.insert_chart_outlined_rounded
+            "Ders Programı"), //Icons.deblur_sharp, Icons.insert_chart_outlined_rounded
         _navBarsItems(Icons.notifications_on_outlined, 22, "Bildirimler")
       ],
       confineInSafeArea: true,

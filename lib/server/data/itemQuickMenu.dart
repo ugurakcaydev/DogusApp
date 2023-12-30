@@ -29,7 +29,7 @@ List<ItemQuickMenu> quickMenuItems = [
       link: "/semesteravarages"),
   ItemQuickMenu(title: "Transkript", icon: Icons.settings, link: "/settings"),
   ItemQuickMenu(
-      title: "Ders Programı", icon: Icons.settings, link: "/settings"),
+      title: "Ders Programı", icon: Icons.settings, link: "/studentprogram"),
   ItemQuickMenu(
       title: "Harç Bilgileri", icon: Icons.settings, link: "/settings"),
   ItemQuickMenu(
