@@ -6,12 +6,14 @@ import 'package:dogus_app/pages/mylessons.dart';
 import 'package:dogus_app/pages/notification.dart';
 import 'package:dogus_app/pages/StudentProgram.dart';
 import "package:dogus_app/screens/StudentCalendar/calendar.dart";
+import 'package:dogus_app/screens/classAttendance/ClassAttendance.dart';
 import "package:get/get.dart";
 
 class AppPage {
   static String navbar = "/";
   static String login = "/login";
   static String home = "/home";
+  static String classAttendance = "/classattendance";
   static String mylessons = "/mylessons";
   static String studentprogram = "/studentprogram";
   static String notificationspage = "/notificationspage";
@@ -19,6 +21,7 @@ class AppPage {
 
   static List<GetPage> routes = [
     GetPage(name: navbar, page: () => const Navbar()),
+     GetPage(name: classAttendance, page: () => const ClassAttendance()),
     GetPage(name: login, page: () => const LoginPage()),
     GetPage(name: home, page: () => const Home()),
     GetPage(name: mylessons, page: () => const MyLessons()),
@@ -28,6 +31,7 @@ class AppPage {
   ];
 
   static getnavbar() => navbar;
+  static getclassattendance() => classAttendance ;
   static getlogin() => login;
   static gethome() => home;
   static getmylessons() => mylessons;
