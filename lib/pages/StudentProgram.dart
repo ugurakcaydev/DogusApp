@@ -166,7 +166,7 @@ class _StudentProgramState extends State<StudentProgram> {
       home: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.red,
           centerTitle: true,
           title: Align(
             alignment: Alignment.centerLeft,
