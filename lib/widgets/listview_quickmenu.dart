@@ -47,7 +47,7 @@ class _ListViewQuickMenuState extends State<ListViewQuickMenu> {
                     padding: EdgeInsets.symmetric(vertical: 6, horizontal: 12),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Color(0xffC1121F)),
+                        color: Colors.grey[700]),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -90,7 +90,7 @@ class _ListViewQuickMenuState extends State<ListViewQuickMenu> {
                       width: 100,
                       padding: EdgeInsets.only(top: 23),
                       decoration: BoxDecoration(
-                        color: Color(0xffC1121F),
+                        color: Colors.grey[700],
                         borderRadius: BorderRadius.circular(10),
                       ),
                       margin: EdgeInsets.only(

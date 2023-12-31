@@ -14,4 +14,5 @@ ThemeData darkMode = ThemeData(
       background: Colors.grey.shade900,
       primary: Colors.grey.shade800,
       secondary: Colors.grey.shade700,
-    ));
+    ),
+    );

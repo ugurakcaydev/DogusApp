@@ -419,3 +419,7 @@ class MonthlyView extends StatelessWidget {
 //goksukucuker
 
 //uguremre
+
+//seloş
+
+//enes

@@ -5,7 +5,7 @@ class VerticalLine extends StatelessWidget {
   final double height;
   final Color color;
   const VerticalLine(
-      {Key? key, this.width = 1, this.height = 35, this.color = Colors.black})
+      {Key? key, this.width = 1, this.height = 35, this.color = Colors.white})
       : super(key: key);
 
   @override

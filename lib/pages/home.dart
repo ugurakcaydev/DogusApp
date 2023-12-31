@@ -91,9 +91,8 @@ class _HomePageState extends State<Home> {
                 width: 350,
                 padding: EdgeInsets.symmetric(vertical: 12),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Color(0xffC1121F),
-                ),
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.grey[700]),
                 child: Column(
                   children: [
                     Container(
@@ -115,19 +114,19 @@ class _HomePageState extends State<Home> {
                         children: [
                           Text(
                             "Muhammed Uğur Emre",
-                            style: TextStyle(fontSize: 20, color: Colors.black),
+                            style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
                           Text(
                             "202103011020",
-                            style: TextStyle(fontSize: 12, color: Colors.black),
+                            style: TextStyle(fontSize: 12, color: Colors.white),
                           ),
                           Text(
                             "MÜHENDİSLİK FAKÜLTESİ",
-                            style: TextStyle(fontSize: 13, color: Colors.black),
+                            style: TextStyle(fontSize: 13, color: Colors.white),
                           ),
                           Text(
                             "YAZILIM MÜHENDİSLİĞİ",
-                            style: TextStyle(fontSize: 13, color: Colors.black),
+                            style: TextStyle(fontSize: 13, color: Colors.white),
                           ),
                         ],
                       ),
@@ -137,7 +136,7 @@ class _HomePageState extends State<Home> {
                       width: 300,
                       decoration: BoxDecoration(
                         border: Border(
-                          top: BorderSide(color: Colors.black, width: 1),
+                          top: BorderSide(color: Colors.white, width: 1),
                         ),
                       ),
                       child: Row(
@@ -162,9 +161,8 @@ class _HomePageState extends State<Home> {
                 width: 350,
                 padding: EdgeInsets.symmetric(vertical: 15, horizontal: 23),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Color(0xffC1121F),
-                ),
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.grey[700]),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -174,7 +172,7 @@ class _HomePageState extends State<Home> {
                       children: [
                         Text("açık",
                             style:
-                                TextStyle(fontSize: 14, color: Colors.black)),
+                                TextStyle(fontSize: 14, color: Colors.white)),
                         SizedBox(
                           height: 5,
                         ),
@@ -183,7 +181,7 @@ class _HomePageState extends State<Home> {
                           children: [
                             Text("4 °",
                                 style: TextStyle(
-                                    fontSize: 32, color: Colors.black)),
+                                    fontSize: 32, color: Colors.white)),
                             SizedBox(
                               width: 8,
                             ),
@@ -197,18 +195,18 @@ class _HomePageState extends State<Home> {
                               children: [
                                 Text("Pazar, 17 Aralık",
                                     style: TextStyle(
-                                        fontSize: 13, color: Colors.black)),
+                                        fontSize: 13, color: Colors.white)),
                                 Row(
                                   children: [
                                     Icon(
                                       Icons.key,
-                                      color: Colors.black,
+                                      color: Colors.white,
                                     ),
                                     SizedBox(width: 5),
                                     Text(
                                       "Ümraniye",
                                       style: TextStyle(
-                                          fontSize: 14, color: Colors.black),
+                                          fontSize: 14, color: Colors.white),
                                     ),
                                   ],
                                 )
