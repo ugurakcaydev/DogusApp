@@ -10,7 +10,7 @@ class StudentCalendar extends StatefulWidget {
 
 class _StudentCalendarState extends State<StudentCalendar> {
   late DateTime selectedDate;
-  List<DateTime> examDates = [DateTime(2023, 12, 15), DateTime(2023, 12, 20)];
+  List<DateTime> examDates = [DateTime(2024, 12, 15), DateTime(2024, 12, 20)];
 
   @override
   void initState() {
@@ -54,7 +54,7 @@ class YearlyCalendar extends StatelessWidget {
     return GridView.builder(
       padding: EdgeInsets.zero,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2, // Her satıra 2 eleman yerleştir
+        crossAxisCount: 2,
       ),
       itemCount: 12,
       shrinkWrap: true, // Yalnızca içeriği kadar alan kapla

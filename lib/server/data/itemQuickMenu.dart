@@ -20,20 +20,20 @@ List<ItemQuickMenu> quickMenuItems = [
       icon: Icons.calendar_month_outlined,
       link: "/academiccalendar"),
   ItemQuickMenu(
-      title: "Alınan Dersler", icon: Icons.settings, link: "/lessonslearned"),
+      title: "Alınan Dersler", icon: Icons.play_lesson, link: "/mylessons"),
   ItemQuickMenu(
       title: "Sınav Sonuçları", icon: Icons.settings, link: "/resultofexam"),
   ItemQuickMenu(
       title: "Dönem Ortalamaları",
-      icon: Icons.settings,
-      link: "/semesteravarages"),
+      icon: Icons.bar_chart_rounded,
+      link: "/semesteraverages"),
   ItemQuickMenu(title: "Transkript", icon: Icons.settings, link: "/settings"),
   ItemQuickMenu(
-      title: "Ders Programı", icon: Icons.settings, link: "/studentprogram"),
+      title: "Ders Programı", icon: Icons.book_online, link: "/studentprogram"),
   ItemQuickMenu(
       title: "Harç Bilgileri", icon: Icons.settings, link: "/settings"),
-  ItemQuickMenu(
-      title: "Devamsızlık Durumu", icon: Icons.settings, link: "/settings"),
+  // ItemQuickMenu(
+  //     title: "Devamsızlık Durumu", icon: Icons.settings, link: "/settings"),
   ItemQuickMenu(
       title: "Akademik Durum ", icon: Icons.settings, link: "/settings"),
   ItemQuickMenu(title: "Müfredat", icon: Icons.settings, link: "/settings"),
